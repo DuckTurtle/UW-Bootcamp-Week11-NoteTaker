@@ -1,14 +1,10 @@
 const express = require('express');
 const path = require('path');
-const { clog } = require('./middleware/clog');
-const api = require('./public/assets/js/index');
+const api = require('./routes/index');
 
 const PORT = process.env.PORT || 3001;
 
 const app = express();
-
-// imports  middleware
-app.use(clog);
 
 // middleware for json and urlencoded
 app.use(express.json());
@@ -22,6 +18,9 @@ app.get('/', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/index.html'))
 );
 
+app.get('*', (req, res) =>
+  res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 // get route for notes 
 app.get('/notes', (req, res) =>
   res.sendFile(path.join(__dirname, '/public/notes.html'))

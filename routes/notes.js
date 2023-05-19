@@ -8,7 +8,6 @@ const {
 
 //get for notes from db.
 notes.get('/', (req,res) => {
-  console.log()
     readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
 });
 
@@ -41,7 +40,7 @@ notes.get('/:id', (req, res) => {
         res.json(`${noteId} has been banished `);
       });
   });
-
+// post notes;
   notes.post('/', (req,res) => {
     console.log(req.body);
     const {title, text} = req.body;

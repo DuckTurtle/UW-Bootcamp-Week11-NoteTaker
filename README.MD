@@ -17,7 +17,8 @@ I created this aplacation to replace the notes app on my app phone, I still don'
 After pullin the starter code download download express , node, and uuid@8.3.2. then run a npm start or just go to the webite located below.
 
 ## Usage
-Website: https://afternoon-atoll-97237.herokuapp.com/notes
+Website: https://afternoon-atoll-97237.herokuapp.com
+
 To use this aplacation hit the get started button. After that type in your note and give it a title, then hit the save button. You can also display the old notes by clicking on the one you wish to view, or delete them by clicking the trash can next to the note you wish to delete.
 
 ![example page](./public/assets/images/notes.JPG);
